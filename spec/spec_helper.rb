@@ -20,7 +20,6 @@ FactoryGirl.define do
   factory :revision, class: 'DeliveryCenter::Revision' do
     association :application
     value { Digest::SHA1.hexdigest(rand(64).to_s) }
-    current { false }
   end
 
   factory :api_key, class: 'DeliveryCenter::ApiKey' do
