@@ -21,7 +21,7 @@ module DeliveryCenter
         adapter: 'mysql2',
         username: ENV['DELIVERY_CENTER_DATABASE_USERNAME'],
         password: ENV['DELIVERY_CENTER_DATABASE_PASSWORD'],
-        database: 'delivery_center_test',
+        database: ENV['DELIVERY_CENTER_DATABASE_DATABASE'] || 'delivery_center_test',
         host: ENV['DELIVERY_CENTER_DATABASE_HOST'],
         port: ENV['DELIVERY_CENTER_DATABASE_PORT'],
       }
@@ -30,7 +30,7 @@ module DeliveryCenter
         adapter: 'mysql2',
         username: ENV['DELIVERY_CENTER_DATABASE_USERNAME'],
         password: ENV['DELIVERY_CENTER_DATABASE_PASSWORD'],
-        database: ENV['DELIVERY_CENTER_DATABASE_DATABASE'],
+        database: ENV['DELIVERY_CENTER_DATABASE_DATABASE'] || 'delivery_center',
         host: ENV['DELIVERY_CENTER_DATABASE_HOST'],
         port: ENV['DELIVERY_CENTER_DATABASE_PORT'],
       }
