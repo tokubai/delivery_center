@@ -6,11 +6,11 @@ require 'delivery_center/version'
 Gem::Specification.new do |spec|
   spec.name          = "delivery_center"
   spec.version       = DeliveryCenter::VERSION
-  spec.authors       = ["Takatoshi Maeda"]
-  spec.email         = ["me@tmd.tw"]
+  spec.authors       = ["Takatoshi Maeda", 'tokubai']
+  spec.email         = ["me@tmd.tw", "developers@tokubai.co.jp"]
 
-  spec.summary       = %q{deploy management}
-  spec.description   = %q{deploy management}
+  spec.summary       = %q{deploy management tool}
+  spec.description   = %q{deploy management tool}
   spec.homepage      = "https://github.com/tokubai/delivery_center"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
