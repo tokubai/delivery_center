@@ -11,3 +11,9 @@ before_script:
   - bundle exec ./exe/delivery_center db migrate
 script:
   - bundle exec rspec
+deploy:
+  api_key:
+    secure: APbt3PruFSNF8l6SsRsdA6spgg8/zlOPcWT5AlMTzYvArTP52qVwBg6l53VPS0o4Blbx534ZvSCg5r/PbjjaKZY1DJGHk6EUCIunzM09wDbTLj4fh37nQGozZYB7EONs8eyedVqN5VxF2fHozR/nByTIZ9Yh4DGshyc0rKK8ObwH1JEaTtzT/Usxen3xMWC9Xee6SyBalSicbZDn8LjxnUcqfzLuOJ8rVJSFClPtwPSM8nFhkI4Qp78GwWVtOlZMoF4hzKSt3MkNy3tx7O5CKnW+o0uBrOW2k2G3Gkz8buw2ehd80OBqUKrPLs9a9bzB1G0IDpjTFLUq3HrJLFwT3oxst0pgGjDkPOlv/KngeUzJNOBvwQN8F4wLsmQdhjlMGYRxvJShtnOoGrkLDYrRZzrt8RaAFtRUNv7qFhK+C/2PoQbc4+w/QY4+ETWwoHuxgHxEDKwO4yQsHxHzm8bFkYpwufTSKgSWJdFelEI+Dq9MWD6TKnpFiwbsTrxYZq0v3B1wV3qpU8Vbxw5n/ABaFkhToAnb2XEUfvafxvg4/RycMpH5fPKA7vu4yP9ZEBoub5qnOev3ENkU7k6qcwyMAgNjy+A0f8zV53TlVOPXnEnQw+2i3Qco5f3fPBptTIEOm4Hn5YkaJ5ryS7nPQ4dI4O4EcavLnOOq8ffjOWQFBUY=
+  provider: rubygems
+  on:
+    tags: true
