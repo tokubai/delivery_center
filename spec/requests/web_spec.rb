@@ -205,11 +205,10 @@ describe 'DeliveryCenter::Web' do
 
     context 'has deploy' do
       let!(:revision) { FactoryGirl.create(:revision, application_id: application.id) }
-      let!(:old_deploy) { FactoryGirl.create(:deploy, application_id: application.id, revision_id: revision.id, current: false) }
       let!(:deploy) { FactoryGirl.create(:deploy, application_id: application.id, revision_id: revision.id, current: true) }
 
       it 'returns current revision' do
-        post "/#{application.name}/revisions/current"
+        get "/#{application.name}/revisions/current"
         expect(last_response).to be_ok
         expect(last_response.body).to eq(revision.value)
       end
