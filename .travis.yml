@@ -1,0 +1,14 @@
+sudo: false
+language: ruby
+rvm:
+  - 2.3.3
+env:
+  - DELIVERY_CENTER_DATABASE_USERNAME=travis
+  - DELIVERY_CENTER_DATABASE_DATABASE=myapp_test
+services:
+  - mysql
+before_script:
+  - bundle exec ./exe/delivery_center db create
+  - bundle exec ./exe/delivery_center db migrate
+script:
+  - bundle exec rspec
