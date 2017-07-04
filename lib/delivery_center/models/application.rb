@@ -4,8 +4,6 @@ class DeliveryCenter::Application < DeliveryCenter::ApplicationRecord
   has_many :revisions, class_name: 'DeliveryCenter::Revision'
   has_many :deploys, class_name: 'DeliveryCenter::Deploy'
 
-  class AlreadyDeployedError < StandardError; end
-
   def can_deploy?
     current_revision != recent_revision
   end
